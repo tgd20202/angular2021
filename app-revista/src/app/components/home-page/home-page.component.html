@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+  <h3>MOTOR DE BUSQUEDAS REVISTA POLITECNICA</h3>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+    [matMenuTriggerFor]="menu">
+    <mat-icon>reorder</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['editor']">Editor</button>
+      <button mat-menu-item [routerLink]="['admin']">Administrador</button>
+    </mat-menu>
+  </button>
+
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>login</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="example-card">
+  <mat-card-content>
+    <form [formGroup]="buscarForm" (ngSubmit)="buscar(buscarForm)" class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Buscador general</mat-label>
+        <input matInput placeholder="Buscador general" formControlName="filtro">
+      </mat-form-field>
+
+      <section>
+        <br>
+        <div class="example-button-row">
+          <button mat-raised-button color="primary" type="submit">
+            Buscar
+            <mat-icon>search</mat-icon>
+          </button>
+        </div>
+        <br>
+  
+      </section>
+    
+    </form>
+
+
+      
+
+    
+  </mat-card-content>
+  
+</div>
+
+
+  
